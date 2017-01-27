@@ -1,0 +1,56 @@
+<html>
+<% include ./partials/head %>
+<body>
+	
+    <!-- Navigation start -->
+    <% include ./partials/header %>
+    <!-- Navigation ends -->
+    
+	<div class="container">
+		<h3>Register</h3>
+		<% if(errors){ %>
+			<% errors.forEach(function(error) { %>
+		        <div class="alert alert-danger"><%= error.msg %></div>
+		    <% }); %>
+		<% } %>
+		<form class="col-md-6 form-horizontal" method="post" action="register">
+			<div class="form-group">
+			    <label for="name" class="col-sm-3 control-label">Name</label>
+			    <div class="col-md-9">
+			    	<input type="name" class="form-control" name="name" id="name" placeholder="Name">
+			    </div>
+		  	</div>
+			<div class="form-group">
+			    <label for="username" class="col-sm-3 control-label">Username</label>
+			    <div class="col-md-9">
+			    	<input type="username" class="form-control" name="username" id="username" placeholder="Username">
+			    </div>
+		  	</div>
+		  	<div class="form-group">
+			    <label for="email" class="col-sm-3 control-label">Email address</label>
+			    <div class="col-md-9">
+			    	<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+			    </div>
+		  	</div>
+		  	<div class="form-group">
+			    <label for="password" class="col-sm-3 control-label">Password</label>
+			    <div class="col-md-9">
+			    	<input type="password" class="form-control" name="password" id="password" placeholder="Password">
+			    </div>
+		  	</div>
+		  	<div class="form-group">
+			    <label for="confirmpassword" class="col-sm-3 control-label">Confirm Password</label>
+			    <div class="col-md-9">
+			    	<input type="password" class="form-control" name="password2" id="confirmpassword" placeholder="Confirm Password">
+			    </div>
+		  	</div>
+		  	<div class="form-group">
+			    <label for="password" class="col-sm-3 control-label"></label>
+			    <div class="col-md-9">
+			    	<button type="submit" class="btn btn-default">Signup</button>
+			    </div>
+		  	</div>
+		</form>
+	</div>
+</body>
+</html>
