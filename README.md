@@ -33,3 +33,5 @@ For Authentication Passport package is used.
 Middlerware is set to check on every page user is logged-in or not using Node js
 
 Ejs is template engine used in this app.
+
+This is Login App which can be used as initialize any Node js project.
